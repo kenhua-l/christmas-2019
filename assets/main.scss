@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: url('wall.jpg');
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  color: #d0be6b;
+  margin-top: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  @media (min-width: 576px){
+    max-width: 540px;
+  }
+  @media (min-width: 768px) {
+    max-width: 720px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col {
+  flex-basis: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 1rem 0;
+  text-align: center;
+  position: relative;
+}
+
+//social
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  src: url("fa-brands-400.woff2") format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  src: url("fa-solid-900.woff2") format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+.social {
+  position: absolute;
+  right: 15px;
+  top: 0;
+  list-style-type: none;
+  li {
+    margin-bottom: 0.5rem;
+    a {
+      display: inline-block;
+      padding: 0.5rem;
+      background: #498fcc;
+      border-radius: 5px;
+      color: white;
+      &:hover {
+        background: #376B99;
+      }
+    }
+  }
+}
+
+.fab {
+  font-family: 'Font Awesome 5 Brands';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  text-align: center;
+  width: 1.25em;
+  &.fa-facebook-f::before {
+    content: "\f39e";
+  }
+  &.fa-twitter::before {
+    content: "\f099";
+  }
+  &.fa-linkedin-in::before {
+    content: "\f0e1";
+  }
+  &.fa-instagram::before {
+    content: "\f16d";
+  }
+  &.fa-youtube::before {
+    content: "\f167";
+  }
+}
+
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  text-align: center;
+  width: 1.25em;
+  &.fa-volume-up::before {
+    content: "\f028";
+  }
+  &.fa-volume-mute::before {
+    content: "\f6a9";
+  }
+}

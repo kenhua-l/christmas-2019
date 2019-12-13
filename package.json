@@ -1,0 +1,27 @@
+{
+  "name": "christmas-card-2019",
+  "version": "1.0.0",
+  "description": "Websparks Christmas Card 2019",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/kenhua/christmas-2019/src"
+  },
+  "keywords": [
+    "christmas",
+    "card",
+    "animation"
+  ],
+  "author": "kenhua-l",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-cli": "^1.3.2",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0"
+  }
+}
