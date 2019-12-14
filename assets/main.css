@@ -70,13 +70,15 @@ img {
 
 @font-face {
   font-family: 'Font Awesome 5 Brands';
-  src: url("fa-brands-400.woff2") format("woff2");
+  src: url("fa-brands-400.eot");
+  src: url("fa-brands-400.eot?#iefix") format("embedded-opentype"), url("fa-brands-400.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: 'Font Awesome 5 Free';
-  src: url("fa-solid-900.woff2") format("woff2");
+  src: url("fa-solid-900.eot");
+  src: url("fa-solid-900.eot?#iefix") format("embedded-opentype"), url("fa-solid-900.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -95,9 +97,20 @@ img {
   background: #498fcc;
   border-radius: 5px;
   color: white;
+  transition: all 0.3s;
 }
 .social li a:hover {
   background: #376B99;
+}
+@media (max-width: 576px) {
+  .social {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .social li {
+    margin: 0 0.25rem;
+  }
 }
 
 .fab {
@@ -140,9 +153,11 @@ img {
   text-align: center;
   width: 1.25em;
 }
-.fas.fa-volume-up::before {
+
+[aria-label="music"].play .fas::before {
   content: "\f028";
 }
-.fas.fa-volume-mute::before {
+
+[aria-label="music"].pause .fas::before {
   content: "\f6a9";
 }
