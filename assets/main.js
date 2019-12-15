@@ -4,7 +4,7 @@ window.addEventListener('load', function(){
   music.load();
   var playPromise = music.play();
   if(playPromise !== undefined){
-    playPromise.then(changeMusicButtonIcon(musicButton, 'pause', 'play')).catch(changeMusicButtonIcon(musicButton, 'play', 'pause'));
+    playPromise.then(changeMusicButtonIcon(musicButton, 'pause', 'play')).catch(function(error){changeMusicButtonIcon(musicButton, 'play', 'pause')});
   }else{
     changeMusicButtonIcon(musicButton, 'pause', 'play');
   }
